@@ -1,3 +1,3 @@
 ALTER TABLE users DROP COLUMN name;
-INSERT INTO users (email) values ('charlie@abc.com');
-INSERT INTO users (email) values ('daniel@abc.com');
+INSERT INTO users (email, department) VALUES ('charlie@abc.com', 'sales');
+INSERT INTO users (email, department) VALUES ('daniel@abc.com', 'engineering');

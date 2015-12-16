@@ -28,3 +28,4 @@ mysql -u root --password="mypassword" \
 -e "CREATE USER 'hive'@'localhost' IDENTIFIED BY 'mypassword'; REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'hive'@'localhost'; GRANT ALL PRIVILEGES ON metastore.* TO 'hive'@'localhost'; FLUSH PRIVILEGES;"
 
 schematool -dbType mysql -initSchema
+

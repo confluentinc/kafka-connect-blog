@@ -26,4 +26,3 @@ rm -rf /mnt/connect.offsets
 rm -rf /mnt/logs/*
 
 
-
