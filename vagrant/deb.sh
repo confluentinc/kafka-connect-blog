@@ -76,14 +76,14 @@ popd
 pushd /opt/
 if [ ! -e confluent ]; then
     pushd /tmp/vagrant-downloads
-    if [ ! -e confluent-2.0.0-2.11.7.tar.gz ]; then
-        wget http://packages.confluent.io/archive/2.0/confluent-2.0.0-2.11.7.tar.gz
+    if [ ! -e confluent-3.0.1-2.11.tar.gz ]; then
+        wget http://packages.confluent.io/archive/3.0/confluent-3.0.1-2.11.tar.gz
     fi
     popd
 
-    tar xvzf /tmp/vagrant-downloads/confluent-2.0.0-2.11.7.tar.gz
+    tar xvzf /tmp/vagrant-downloads/confluent-3.0.1-2.11.tar.gz
 fi
-ln -s /opt/confluent-2.0.0 /opt/confluent
+ln -s /opt/confluent-3.0.1 /opt/confluent
 popd
 
 # Copy .profile and change owner to vagrant
