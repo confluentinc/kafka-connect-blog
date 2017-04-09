@@ -43,14 +43,14 @@ fi
 pushd /opt/
 if [ ! -e hadoop ]; then
     pushd /tmp/vagrant-downloads
-    if [ ! -e hadoop-2.6.0.tar.gz ]; then
-        wget http://mirrors.koehn.com/apache/hadoop/common/hadoop-2.6.0/hadoop-2.6.0.tar.gz
+    if [ ! -e hadoop-2.6.5.tar.gz ]; then
+        wget http://mirrors.koehn.com/apache/hadoop/common/hadoop-2.6.5/hadoop-2.6.5.tar.gz
     fi
     popd
 
-    tar xvzf /tmp/vagrant-downloads/hadoop-2.6.0.tar.gz
+    tar xvzf /tmp/vagrant-downloads/hadoop-2.6.5.tar.gz
 fi
-ln -s /opt/hadoop-2.6.0 /opt/hadoop
+ln -s /opt/hadoop-2.6.5 /opt/hadoop
 popd
 
 # Install and configure Hive
@@ -60,16 +60,16 @@ if [ -h /opt/hive ]; then
 fi
 
 pushd /opt/
-if [ ! -e apache-hive-1.2.1-bin ]; then
+if [ ! -e apache-hive-1.2.2-bin ]; then
     pushd /tmp/vagrant-downloads
-    if [ ! -e apache-hive-1.2.1-bin.tar.gz ]; then
-        wget http://ftp.wayne.edu/apache/hive/hive-1.2.1/apache-hive-1.2.1-bin.tar.gz
+    if [ ! -e apache-hive-1.2.2-bin.tar.gz ]; then
+        wget http://ftp.wayne.edu/apache/hive/hive-1.2.2/apache-hive-1.2.2-bin.tar.gz
     fi
     popd
 
-    tar xvzf /tmp/vagrant-downloads/apache-hive-1.2.1-bin.tar.gz
+    tar xvzf /tmp/vagrant-downloads/apache-hive-1.2.2-bin.tar.gz
 fi
-ln -s /opt/apache-hive-1.2.1-bin /opt/hive
+ln -s /opt/apache-hive-1.2.2-bin /opt/hive
 popd
 
 # Install CP
